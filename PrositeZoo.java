@@ -35,14 +35,38 @@ class ZooMangment {
   myzoo.name="carthage";
   myzoo.nbrCages=50;*/
     Animal lion =new Animal ("cat", "tarchouna",5, true);
-    Zoo myzoo=new  Zoo("carthage", "tunis", 20);
-    Zoo myzoo1=new  Zoo("afriga", "tunjerbais", 50);
+     Animal cheval =new Animal ("cheval", "hoh",10, true);
+     Animal cheval2 =new Animal ("cheval", "hoh",10, true);
+     Animal cat =new Animal ("cat", "dsd",2, true);
+
+    Zoo myzoo=new  Zoo("carthage", "tunis");
+    Zoo myzoo1=new  Zoo("afriga", "tunjerbais");
     //affichage//
     myzoo.displayZoo();
   myzoo1.displayZoo();
  //toString methode//
   System.out.println(lion);
   System.out.println(myzoo);
+
+     myzoo.addAnimal(lion);
+    myzoo.addAnimal(cheval);
+     myzoo.addAnimal(cat);
+     myzoo.afficherZoo();
+     //myzoo.searchAnimal(lion4);
+     System.out.println(myzoo.searchAnimal(lion));
+     myzoo.supprimeAnimal(cheval);
+     myzoo.afficherZoo();
+     myzoo.supprimeAnimal(cat);
+
+     Zoo resultat = Zoo.comparerZoo(myzoo, myzoo1);
+     if (resultat != null) {
+         System.out.println("Le zoo qui contient le plus d'animaux est : "
+                 + resultat.getName());
+     } else {
+         System.out.println("Les deux zoos ont le même nombre d'animaux.");
+     }
+
+
 
 
 

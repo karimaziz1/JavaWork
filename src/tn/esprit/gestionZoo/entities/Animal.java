@@ -1,3 +1,6 @@
+package src.tn.esprit.gestionZoo.entities;
+
+
 public class Animal {
 
     private  String  family;

@@ -1,3 +1,5 @@
+package src.tn.esprit.gestionZoo.entities;
+
 public class Zoo {
 
     private String name;
@@ -26,7 +28,7 @@ public class Zoo {
     }
 
 
-    /*public Zoo(String name, String city, int nbrCages) {
+    /*public src.tn.esprit.gestionZoo.entities.Zoo(String name, String city, int nbrCages) {
         this.name = name;
         this.city = city;
         this.nbrCages = nbrCages;
@@ -46,7 +48,7 @@ public class Zoo {
         return  name+" "+city+" "+nbrCages ;
     }
 
-    public boolean addAnimal(Animal animal)
+    public boolean addAnimal(src.tn.esprit.gestionZoo.entities.Animal animal)
     {
       if (nbrAnimal<animals.length)
       {
@@ -127,7 +129,7 @@ public class Zoo {
         animals[nbrAnimal - 1] = null;
         nbrAnimal--;
 
-        System.out.println("Animal supprimé avec succès");
+        System.out.println("src.tn.esprit.gestionZoo.entities.Animal supprimé avec succès");
         return true;
 
     }

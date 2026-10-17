@@ -1,4 +1,9 @@
-import java.util.Scanner;
+package src.tn.esprit.gestionZoo.main;
+
+
+import src.tn.esprit.gestionZoo.entities.Animal;
+import src.tn.esprit.gestionZoo.entities.Zoo;
+
 class ZooMangment {
  public static void main(String[] args) {
 // int nbrCages=20;
@@ -24,23 +29,23 @@ class ZooMangment {
   System.out.println(zooName + " comporte " + nbrCages + " cages ");
   sc.close();*/
 
-  /*Animal lion= new Animal();
+  /*src.tn.esprit.gestionZoo.entities.Animal lion= new src.tn.esprit.gestionZoo.entities.Animal();
   lion.family="cat";
   lion.name="tarchouna";
   lion.age=5;
   lion.isMammal=true;
 
-  Zoo myzoo= new Zoo();
+  src.tn.esprit.gestionZoo.entities.Zoo myzoo= new src.tn.esprit.gestionZoo.entities.Zoo();
   myzoo.city="tunis";
   myzoo.name="carthage";
   myzoo.nbrCages=50;*/
-    Animal lion =new Animal ("cat", "tarchouna",5, true);
-     Animal cheval =new Animal ("cheval", "hoh",10, true);
-     Animal cheval2 =new Animal ("cheval", "hoh",10, true);
-     Animal cat =new Animal ("cat", "dsd",2, true);
+    Animal lion =new Animal("cat", "tarchouna",5, true);
+     Animal cheval =new Animal("cheval", "hoh",10, true);
+     Animal cheval2 =new Animal("cheval", "hoh",10, true);
+     Animal cat =new Animal("cat", "dsd",2, true);
 
-    Zoo myzoo=new  Zoo("carthage", "tunis");
-    Zoo myzoo1=new  Zoo("afriga", "tunjerbais");
+    Zoo myzoo=new Zoo("carthage", "tunis");
+    Zoo myzoo1=new Zoo("afriga", "tunjerbais");
     //affichage//
     myzoo.displayZoo();
   myzoo1.displayZoo();

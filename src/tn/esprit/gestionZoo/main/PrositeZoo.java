@@ -12,10 +12,10 @@ class ZooMangment {
      Animal cat =new Animal("cat", "dsd",2, true);
 
     Zoo myzoo=new Zoo("carthage", "tunis");
-    Zoo myzoo1=new Zoo("afriga", "tunjerbais");
+
     //affichage//
     myzoo.displayZoo();
-  myzoo1.displayZoo();
+
  //toString methode//
   System.out.println(lion);
   System.out.println(myzoo);
@@ -30,7 +30,7 @@ class ZooMangment {
      myzoo.afficherZoo();
      myzoo.supprimeAnimal(cat);
 
-     Zoo resultat = Zoo.comparerZoo(myzoo, myzoo1);
+     Zoo resultat = Zoo.comparerZoo(myzoo, myzoo);
      if (resultat != null) {
          System.out.println("Le zoo qui contient le plus d'animaux est : "
                  + resultat.getName());
@@ -38,22 +38,34 @@ class ZooMangment {
          System.out.println("Les deux zoos ont le même nombre d'animaux.");
      }
 
-     Aquatic  fish =new Aquatic("fish","9arous",10,true,"tunisie");
-     Dolphin balle=new Dolphin("fish","fou9ma",10 ,false,"france",25);
-      Penguin peng1= new Penguin("bt","jiji",10,true ,"tunis",15);
+  Aquatic q = new Dolphin("fish", "9arous", 10, true, "tunisie", 25);
+  Aquatic q1 = new Dolphin("fish1", "dauphin1", 8, true, "tunisie", 20);
+  Aquatic q2 = new Dolphin("fish2", "dauphin2", 7, true, "france", 22);
+  Aquatic q3 = new Penguin("bt", "jiji", 10, true, "tunis", 100);
+  Aquatic q4 = new Penguin("bt", "jiji", 10, true, "tunis", 110);
 
-      Dolphin balle2=new Dolphin("ea","fou9ma",10 ,false,"france",25);
-     Terrestrial ters2 = new Terrestrial("dez","ters",5, false ,5);
 
-     System.out.println(fish);
 
-     System.out.println(balle);
-     System.out.println(peng1);
-     System.out.println(balle2);
+     //polly//
 
-     fish.swim();
-     balle.swim();
-     peng1.swim();
+     myzoo.addAquaticAnimals(q);
+     myzoo.addAquaticAnimals(q1);
+  myzoo.addAquaticAnimals(q2);
+  myzoo.addAquaticAnimals(q3);
+  myzoo.addAquaticAnimals(q4);
+
+     myzoo.displayAquaticAnimals();
+
+
+
+  System.out.println("Profondeur maximale des pingouins : "
+          + myzoo.maxPenguinDepth());
+
+  myzoo.afficherNombreAnimauxAquatiques();
+  System.out.println(q3.equals(q4));
+
+
+
 
 
 

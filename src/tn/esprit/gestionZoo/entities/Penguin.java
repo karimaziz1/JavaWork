@@ -9,12 +9,18 @@ public class Penguin extends  Aquatic{
         this.swimmingDepth = swimmingDepth;
     }
 
+    public float getSwimmingDepth() {
+        return swimmingDepth;
+    }
 
+    public void setSwimmingDepth(float swimmingDepth) {
+        this.swimmingDepth = swimmingDepth;
+    }
 
     /*public Penguin()
-    {
-        System.out.println("penguine cree");
-    }*/
+            {
+                System.out.println("penguine cree");
+            }*/
     public String toString() {
         return super.toString() +" " +swimmingDepth;
 

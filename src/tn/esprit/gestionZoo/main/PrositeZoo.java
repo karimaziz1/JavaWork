@@ -1,44 +1,11 @@
 package src.tn.esprit.gestionZoo.main;
 
 
-import src.tn.esprit.gestionZoo.entities.Animal;
-import src.tn.esprit.gestionZoo.entities.Zoo;
+import src.tn.esprit.gestionZoo.entities.*;
 
 class ZooMangment {
  public static void main(String[] args) {
-// int nbrCages=20;
-// String zooName ="my zoo";
-// System.out.println(zooName+" comporte "+nbrCages+" cages ");
- /* Scanner sc = new Scanner(System.in);
-  System.out.println("donner le nombre des cages :");
-  int nbrCages = sc.nextInt();
-  sc.nextLine();
-  System.out.println("donner le nom de zoo :");
-  String zooName = sc.nextLine();
-  while (nbrCages < 0 || zooName.isEmpty()) {
-   if (nbrCages < 0) {
-    System.out.println(" le nombre des cages negative :");
-    nbrCages = sc.nextInt();
-    sc.nextLine();
-   }
-   if (zooName.isEmpty()) {
-    System.out.println(" le nom de zoo est vide :");
-    zooName = sc.nextLine();
-   }
-  }
-  System.out.println(zooName + " comporte " + nbrCages + " cages ");
-  sc.close();*/
 
-  /*src.tn.esprit.gestionZoo.entities.Animal lion= new src.tn.esprit.gestionZoo.entities.Animal();
-  lion.family="cat";
-  lion.name="tarchouna";
-  lion.age=5;
-  lion.isMammal=true;
-
-  src.tn.esprit.gestionZoo.entities.Zoo myzoo= new src.tn.esprit.gestionZoo.entities.Zoo();
-  myzoo.city="tunis";
-  myzoo.name="carthage";
-  myzoo.nbrCages=50;*/
     Animal lion =new Animal("cat", "tarchouna",5, true);
      Animal cheval =new Animal("cheval", "hoh",10, true);
      Animal cheval2 =new Animal("cheval", "hoh",10, true);
@@ -70,6 +37,26 @@ class ZooMangment {
      } else {
          System.out.println("Les deux zoos ont le même nombre d'animaux.");
      }
+
+     Aquatic  fish =new Aquatic("fish","9arous",10,true,"tunisie");
+     Dolphin balle=new Dolphin("fish","fou9ma",10 ,false,"france",25);
+      Penguin peng1= new Penguin("bt","jiji",10,true ,"tunis",15);
+
+      Dolphin balle2=new Dolphin("ea","fou9ma",10 ,false,"france",25);
+     Terrestrial ters2 = new Terrestrial("dez","ters",5, false ,5);
+
+     System.out.println(fish);
+
+     System.out.println(balle);
+     System.out.println(peng1);
+     System.out.println(balle2);
+
+     fish.swim();
+     balle.swim();
+     peng1.swim();
+
+
+
 
 
 

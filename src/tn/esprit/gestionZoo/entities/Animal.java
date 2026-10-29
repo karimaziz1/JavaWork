@@ -3,10 +3,10 @@ package src.tn.esprit.gestionZoo.entities;
 
 public class Animal {
 
-    private  String  family;
+    private    String  family;
      private String name;
-     private   int age ;
-   private   boolean isMammal;
+    private    int age ;
+   private     boolean isMammal;
 
 
     public Animal(String family, String name, int age, boolean isMammal) {
@@ -35,5 +35,10 @@ public class Animal {
     @Override
     public String toString() {
         return  family+" "+name+" "+age+" "+isMammal ;
+    }
+
+    //erithage
+    protected void display() {
+        System.out.println("Nom : " + name);
     }
 }

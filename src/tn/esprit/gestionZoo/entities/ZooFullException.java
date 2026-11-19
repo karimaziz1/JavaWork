@@ -1,0 +1,8 @@
+package src.tn.esprit.gestionZoo.entities;
+
+public class ZooFullException extends Exception {
+    public ZooFullException(String message) {
+
+        super(message);
+    }
+}

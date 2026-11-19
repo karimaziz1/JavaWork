@@ -4,12 +4,16 @@ public class Zoo {
 
     private String name;
     private String city ;
-   private static final int nbrCages=25;
+   private static final int nbrCages=3;
    private  Animal[] animals=new Animal[nbrCages];
     private Aquatic[] aquaticAnimals = new Aquatic[10];
-    private  int nbrAnimal=0;
+    private  int nbrAnimal;
     private int nbrAqo=0;
 
+    public int getNbrAnimal()
+    {
+        return nbrAnimal;
+    }
     public Zoo(String name,String city) {
         setName(name) ;
         this.city = city;
@@ -45,54 +49,40 @@ public class Zoo {
         System.out.println(name+" "+city +" "+nbrCages );
     }
 
-    @Override
-    /*public String toString() {
-        return  name+" "+city+" "+nbrCages ;
-    }
 
-    public boolean addAnimal(src.tn.esprit.gestionZoo.entities.Animal animal)
-    {
-      if (nbrAnimal<animals.length)
-      {
-          animals[nbrAnimal]=animal;
-          nbrAnimal++;
-          System.out.println("ajouter aavec succes");
-        return true;
-
-      }
-      else
-      {
-          System.out.println("tableau plain");
-          return false;
-      }
-    }*/
     public String toString() {
         return  name+" "+city+" "+nbrCages ;
     }
 
-    public boolean addAnimal(Animal animal)
+
+
+    /*public String toString() {
+        return  name+" "+city+" "+nbrCages ;
+    }*/
+
+    public void addAnimal(Animal animal) throws ZooFullException,InvalidAgeException
     {
-        boolean full=isZooFull();
+
         if (searchAnimal(animal) != -1)
         {
             System.out.println("animal exist");
-            return false ;
+            return ;
+        }
+        if (animal.getAge()<0)
+        {
+            throw new InvalidAgeException("le age est negative");
+        }
+        if (nbrAnimal >= animals.length) {
+            throw new ZooFullException("Le zoo est plein !");
         }
 
-        if (!full)
-        {
             animals[nbrAnimal]=animal;
             nbrAnimal++;
             System.out.println("ajouter aavec succes");
-            return true;
 
-        }
-        else
-        {
-            System.out.println("tableau plain");
-            return false;
-        }
+
     }
+
     public void afficherZoo()
     {
         for (Animal a:animals)
